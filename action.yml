@@ -1,9 +1,18 @@
-name: 'Podcast Generator'
-description: 'Action to generate podcast feeds'
-inputs:
-  feed_url:
-    description: 'URL of the podcast feed'
-    required: true
+name: "Podcast Generator"
+author: "Ray Villalobos"
+description: "Generates a feed for a podcast from a YAML file"
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: The commiter's email address.
+    required: true
+    default: ${{ github.actor }}@localhost
+name:
+  description: The committer's name
+  required: true
+  default: ${{ github.actor }}
