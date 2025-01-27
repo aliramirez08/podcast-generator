@@ -12,7 +12,7 @@ inputs:
     description: The commiter's email address.
     required: true
     default: ${{ github.actor }}@localhost
-podcast_name:
+creator:
   description: The committer's name
   required: true
   default: ${{ github.actor }}
