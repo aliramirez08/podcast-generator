@@ -1,18 +1,9 @@
-name: "Podcast Generator"
-author: "Ray Villalobos"
-description: "Generates a feed for a podcast from a YAML file"
-runs:
-  using: "docker"
-  image: "Dockerfile"
-branding:
-  icon: "git-branch"
-  color: "red"
+name: 'Podcast Generator'
+description: 'Action to generate podcast feeds'
 inputs:
-  email:
-    description: The commiter's email address.
+  feed_url:
+    description: 'URL of the podcast feed'
     required: true
-    default: unknown@localhost
-committer_name:
-  description: The committer's name
-  required: true
-  default: Unknown
+runs:
+  using: 'node12'
+  main: 'index.js'
