@@ -9,4 +9,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Additional commands for your Dockerfile
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy feed.py and feed.yaml into the container
+COPY feed.py feed.yaml ./
+
+# Ensure feed.py is executable
+RUN chmod +x feed.py
