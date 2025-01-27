@@ -12,7 +12,7 @@ inputs:
     description: The commiter's email address.
     required: true
     default: unknown@localhost
-name:
+committer_name:
   description: The committer's name
   required: true
   default: Unknown
