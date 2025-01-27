@@ -10,6 +10,14 @@ branding:
   color: "red"
 
 inputs:
+  email:
+    description: "The committer's email address."
+    required: false
+    default: "unknown@localhost"
+  name:
+    description: "The committer's name."
+    required: false
+    default: "Unknown"
   feed_url:
-    description: "URL of the podcast feed"
+    description: "URL of the podcast feed."
     required: true
